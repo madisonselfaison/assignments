@@ -1,38 +1,27 @@
-/* This was from the lesson, but I'm not sure how I can fit the rest of my code in
-
-const operator = readlinesync.keyIn("do you want to (a)dd, (s)ubract, (d)ivide, or (m)ultiply?")
-
-if(){
-
-}
-*/
-
-//Here is the code I patterned after a website that the lesson provided
 const readline = require("readline-sync")
-    choice = ['Add', 'Multiply', 'Divide', 'Subtract'],
-    index = readlineSync.keyInSelect(choice,"Please enter the operation to perform");
-console.log('Ok, ' + choice[index] + ' The result is ');
+let num1 = readline.question("Please enter your first number?")
+let num2 = readline.question("Please enter your second number?")
+operations = ['add', 'sub', 'mul', 'div'];
+let userInput = readline.keyInSelect(operations,"Please enter the operation to perform")
 
-let num1 = readline.questionInt("Please enter your first number?")
-let num2 = readline.questionInt("Please enter your second number?")
-
-function add(x,y){
-    return x + y
+function add(num1,num2){
+    console.log("the result is: " + (Number(num1) + Number (num2)))
 }
-console.log(add(num1, num2))
-
-function sub(x,y){
-    return x - y 
+function sub(num1,num2){
+    console.log("the result is: " + (Number(num1) - Number (num2)))
 }
-console.log(add(num1, num2))
-
-function mul(x,y){
-    return x * y
+function mul(num1,num2){
+    console.log("the result is: " + (Number(num1) * Number (num2)))
 }
-console.log(mul(num1, num2))
-
-function div(x,y){
-    return x / y
+function div(num1,num2){
+    console.log("the result is: " + (Number(num1) / Number (num2)))
 }
-console.log(div(num1, num2))
-
+if(userInput === 0){
+    add(num1, num2);
+}   else if(userInput === 1){
+    sub(num1, num2)
+}   else if(userInput === 2){
+    mul(num1, num2)
+}   else{
+    div(num1, num2)
+}
