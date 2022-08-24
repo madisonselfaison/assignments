@@ -1,14 +1,17 @@
 //Loop through the following array and count how many "`computer`s" there are. Log the final count:
 
 var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
-for (var i = 0; i<computer i++){
-    console.log(computer.length)
+    
+let counter = 0;
+for (let i = 0; i < officeItems.length; i++) {
+    if (officeItems[i] === 'computer') counter++;
 }
+console.log(counter);
 
 
 //Loop through the following array and log to the console "old enough" if they are 18 or older, and "not old enough" if they aren't 18.//
 
-var users = [
+var people = [
     {
       name: "Mike",
       age: 12,
@@ -31,7 +34,12 @@ var users = [
       gender: "female"
     }
   ]
+   
+    for(let i = 0; i < people.length; i++){
+        if(people[i].age >= 18){
+            console.log(people[i].name + " is old enough to see Mad Max")
+        } else{
+            console.log(people[i].name + " is not old enough to see Mad Max")
+        }
+    }
 
-  for(var i = 18; i < 100; i++){
-    console.log("Hi, I am " + users[i].name + " and I am old enough")
-  }
