@@ -1,149 +1,136 @@
+var readline = require('readline-sync');
+var welcome = readline.question("Welcome to the treacherous world under the sea! Enter your name if you dare: ");
 
-var readlineSync = require('readline-sync');
-var name = readlineSync.question("Welcome to the treacherous world under the sea! Enter your name if you dare: ");
-var enemies = ["Klay the Killer Whale", "George the Giant Squid", "Sheldon the Shark"];
+let player = {
+    "hp": 100,
+    "name": welcome
+}
 
-var wildAdventure = function() {
-	var self = this;
-	var enemy;
-	var generateRandomEnemy = function() {
-		var randomInt = Math.floor(Math.random() * ((enemies.length - 1) - 0 + 1)) + 0;
-		enemy = enemies[randomInt];
-		return enemy;
-	};
-	this.user = name;
-	this.userIsActive = true;
-	this.userHp = 100;
-	this.enemyHp = 100;
-	this.enemyIsActive = null;
-	this.enemyCount = 1;
+var enemyAtk = Math.floor(Math.random() * (30 - 25 + 1) + 10);
+var playerAtk = Math.floor(Math.random() * (50 - 25 + 1) + 25);
 
-	this.userAction = function() {
-		var action = readlineSync.question('What do you want to do?, enter "r" to swim away, or "a" to attack: ').toLowerCase();
-		var userAttackPower = Math.floor(Math.random() * (50 - 25 + 1) + 25);
+function whatsName(){
+    if(welcome === ""){
+        this.user = welcome
+    }
+}
 
-		switch(action) {
-			case 'r':
-				self.userIsActive = false;
-				console.log('Wow. You lost your gills because you ran away and ' +  enemy + ' can smell your weakness.');
-				setTimeout(function(){
-					console.log(enemy + ' has eaten you!');
-				}, 60);
-				break;
-			case 'a':
-				self.enemyHp -= userAttackPower;
-				console.log('You just attacked ' + enemy + ' for ' + userAttackPower + ' attack power');
-				break;
-			default:
-				console.log('Please enter a valid key');
-		}
+if(welcome !== null){
+    whatsName()
+    enterGame()
+}
+    
+var enemies = [
+    {name: "Klay the Killer Whale", hp: 100}, 
+    {name: "George the Giant Squid", hp: 100}, 
+    {name: "Sheldon the Shark", hp: 100}
+];
 
-	};
+function swim(){
+    console.clear()
+    let chance = Math.floor((Math.random() * 2 ) + 1 )
+    switch(chance){
+        case 1:
+            encounter()
+            break;
+            default: 
+            safe()
+            break;
+    }  
+}
 
-	this.enemyAction = function() {
-		if(self.userIsActive === true && self.enemyHp > 0) {
-			var enemyAttackPower = Math.floor(Math.random() * (50 - 25 + 1) + 25);
-			self.userHp -= enemyAttackPower;
-			console.log(enemy + ' just attacked you for ' +  enemyAttackPower + ' attack power');
+function enterGame(){
+    console.clear()
+    readline.keyInPause(`welcome, ${welcome}`)
+}
 
-			if(self.userHp <= 0) {
-				self.userIsActive = false;
-				console.log(enemy + ' has killed ' + self.user + ' may you rest in kelp.');
-			}
+function encounter(){
+    console.clear()
+    let number = Math.floor((Math.random()*3) +0)
+    let enemy = enemies[number]
+    fight(enemy)
+    choice()
+}
 
-		} else if (self.enemyHp <= 0) {
-			self.enemyIsActive = false;
-			self.enemyCount++;
-			console.log(self.user + ' has killed ' + enemy);
-		}
-	};
+function choice(){
+    console.clear()
+    let journey = readline.keyIn(`Would you like to: (s) Continue swimming or (p) Print your stats? `, {limit:'$<s,p>'})
+    if( journey === 's'){
+        readline.keyInPause("You keep swimming")
+    } else if ( journey === 'p'){
+        print()
+    }
+}
+function print(){
+    console.clear()
+    readline.keyInPause("Name:" + welcome + `\nHp: ` + player.hp)
+}
 
-	this.restoreEnemy =  function() {
-		self.enemyIsActive = true;
-		self.enemyHp = 50;
-	};
+function safe(){
+    console.clear()
+    readline.keyInPause('You are safe... For now')
+    choice()
+}
 
-	this.processAttack = function() {
-		if(self.enemyIsActive) {
-			while(self.enemyHp > 0 && self.userIsActive === true) {
-				self.userAction();
-				self.enemyAction();
-			}
-		}
-	};
+	function fight(enemy){
+        foeHp = enemy.hp
+        foeName = enemy.name
+        engage = readline.keyIn('Oh no! You encountered ' + enemy.name + ', ' + ' (a) Attack or (r) Swim away ',{limit: '$<a,r>;'})
+        engage = engage.toLowerCase()
+        if (engage === 'a'){
+            console.clear()
+            attack()
+        }else if (engage === 'r'){
+            runAway()
+        }
+    }
 
-	this.initialize = function() {
-		self.enemyIsActive = true;
-		readlineSync.keyIn('Welcome, ' + name + '! Press "s" to swim: ');
-		generateRandomEnemy();
-		console.log('Swimming...');
-		console.log('Oh barnacles! ' + enemy + ' has appeared');
-		self.processAttack();
+function attack(){
+    while(engage === 'a'){ 
+        enemyAttack = " attacks dealing " + enemyAtk + " points of damage to you " ; player.hp = player.hp - enemyAtk
+        playerAttack = " attack " + foeName + " and deal "  + playerAtk + " points of damage, \n" ; foeHp = foeHp - playerAtk
+            if(player.hp > 0){
+                if(foeHp > 0){
+                    engage = readline.keyIn(`You` + playerAttack + foeName + enemyAttack + `and your current HP is ` + player.hp + `. \n` + foeName + `'s current HP is ` + foeHp + `. (a) Attack again or (r) Swim away? `,{limit:'$<a,r>'})  
+                }
+            }else {
+               readline.keyInPause("you survived in the ocean and got the Treasure Chest. You won!")
+               engage=''
+               process.exit()
+            }
+        } while(engage === 'r'){
+            runAway()
+        } if(player.hp <=0){
+            loss()
+        }
+        }
+        function runAway(){
+            let chance = Math.floor((Math.random()*2)+1)
+            while(engage === 'r'){
+                if (chance !== 1){
+                    player.hp = player.hp - enemyAtk
+                    engage = readline.keyIn(`You attempt to swim away, but ` + foeName +  ` attacks dealing ` + enemyAtk + ' points of damage to you. \n'+ `Your current HP is ` + player.hp + ` and ` + foeName + `'s current HP is ` + foeHp + `. \n (a) Attack or (r) Swim away? `,{limit:'$<a,r>'})
+                    if (engage === 'a'){
+                        attack()
+                        engage='r'
+                    }
+                    readline.keyInPause('Whew. You manage to escape safely')
+                    engage = ''
+                }
+            }
+        };
 
-		while(self.enemyIsActive === false && self.enemyCount <= enemies.length) {
-			console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-			readlineSync.keyIn('Press "s" to swim: ');
-			generateRandomEnemy();
-			console.log('Swimming...');
-			console.log('Oh barnacles! ' + enemy + ' has appeared');
-			self.restoreEnemy();
-			self.processAttack();
-		}
+        while( player.hp > 0){
+            console.clear()
+            swim()
+         }
 
-		if (self.enemyIsActive === false) {
-			console.log(self.user + ' is the master the ocean!');
-		}
-	};
-	
-	this.initialize();
-};
+        while(player.hp <= 0){
+            loss()
+        }
 
-wildAdventure();
-
-
-
-
-
-
-
-
-
-
-
-
-// const readline = require("readline-sync");
-
-
-// const name = readline.question("Welcome to the treacherous world under the sea! Enter your name if you dare: ");
-// console.log("Hello " + name + "! Nice gills you've got there. I am glad you came prepared because things are about to get crazy...")
-
-// this.user = name;
-// this.userIsActive = true;
-// this.userHp = 100;
-
-// const enemies = ["Klay the Killer Whale", "George the Giant Squid", "Sheldon the Shark"];
-
-// const options = ["Walk, Quit"]
-
-// function askQuestion() {
-//     gameOptions = readline.keyInSelect(options, "What would you like to do next?")
-// }
-
-
-
-// function walk(){ 
-//     const willFight = prompt('(f) for fighting, (i) for checking inventory')
-//     if(willWalk === "f"){
-//         fight()
-//     } else if (willWalk === "i"){
-//         checkInventroy()
-//     } 
-// }
-
-// function fight(){
-//     const winner = selectWinner()
-// }
-
-// while(hp > 0){
-//     walk()
-// }
+         function loss(){
+            console.clear()
+            readline.keyInPause("Sad day, you've been eaten. \n You died and more importantly, \n you lost the game.")
+            process.exit()
+         }
