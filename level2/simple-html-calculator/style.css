@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(190, 186, 173);
+}
+
+h1 {
+        color: #fff;
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+        text-align: center;
+        text-decoration: underline;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.76);
+    text-decoration: underline;
+    text-align: center;
+}
+
+.containerA {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.containerB {
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.containerC {
+    display:flex;
+    justify-content:center;
+    margin-top: 50px;
+}

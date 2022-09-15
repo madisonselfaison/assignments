@@ -21,7 +21,7 @@ function makeChoice() {
     } else if (gameOptions === 1){
         console.log("You found the key. Now get to the door")
         playerLife = true;
-        console.log(`playerlife: ${playerLife}`)
+        // console.log(`playerlife: ${playerLife}`)
         foundKey = true;
         askQuestion()
     } else if (gameOptions === 2 && foundKey){
@@ -30,7 +30,7 @@ function makeChoice() {
     } else {
         console.log("The door handle electrocuted you")
         playerLife = false;
-        console.log(`playerlife:${playerLife}`)
+        // console.log(`playerlife:${playerLife}`)
     }
 }
 

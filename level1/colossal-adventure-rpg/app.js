@@ -2,11 +2,11 @@ var readline = require('readline-sync');
 var welcome = readline.question("Welcome to the treacherous world under the sea! Enter your name if you dare: ");
 
 let player = {
-    "hp": 100,
+    "hp": 50,
     "name": welcome
 }
 
-var enemyAtk = Math.floor(Math.random() * (30 - 25 + 1) + 10);
+var enemyAtk = Math.floor(Math.random() * (50 - 25 + 1) + 25);
 var playerAtk = Math.floor(Math.random() * (50 - 25 + 1) + 25);
 
 function whatsName(){
@@ -27,7 +27,7 @@ var enemies = [
 ];
 
 function swim(){
-    console.clear()
+    // console.clear()
     let chance = Math.floor((Math.random() * 2 ) + 1 )
     switch(chance){
         case 1:
@@ -40,12 +40,12 @@ function swim(){
 }
 
 function enterGame(){
-    console.clear()
+    // console.clear()
     readline.keyInPause(`welcome, ${welcome}`)
 }
 
 function encounter(){
-    console.clear()
+    // console.clear()
     let number = Math.floor((Math.random()*3) +0)
     let enemy = enemies[number]
     fight(enemy)
@@ -53,7 +53,7 @@ function encounter(){
 }
 
 function choice(){
-    console.clear()
+    // console.clear()
     let journey = readline.keyIn(`Would you like to: (s) Continue swimming or (p) Print your stats? `, {limit:'$<s,p>'})
     if( journey === 's'){
         readline.keyInPause("You keep swimming")
@@ -62,12 +62,12 @@ function choice(){
     }
 }
 function print(){
-    console.clear()
+    // console.clear()
     readline.keyInPause("Name:" + welcome + `\nHp: ` + player.hp)
 }
 
 function safe(){
-    console.clear()
+    // console.clear()
     readline.keyInPause('You are safe... For now')
     choice()
 }
@@ -78,7 +78,7 @@ function safe(){
         engage = readline.keyIn('Oh no! You encountered ' + enemy.name + ', ' + ' (a) Attack or (r) Swim away ',{limit: '$<a,r>;'})
         engage = engage.toLowerCase()
         if (engage === 'a'){
-            console.clear()
+            // console.clear()
             attack()
         }else if (engage === 'r'){
             runAway()
@@ -114,14 +114,14 @@ function attack(){
                         attack()
                         engage='r'
                     }
-                    readline.keyInPause('Whew. You manage to escape safely')
+                    readline.keyInPause('Whew. You managed to escape safely')
                     engage = ''
                 }
             }
         };
 
         while( player.hp > 0){
-            console.clear()
+            // console.clear()
             swim()
          }
 
@@ -130,7 +130,8 @@ function attack(){
         }
 
          function loss(){
-            console.clear()
+            console.log("You are in the loss function")
+            // console.clear()
             readline.keyInPause("Sad day, you've been eaten. \n You died and more importantly, \n you lost the game.")
             process.exit()
          }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Please Enter Your Information Below</h1>
+    <div>
+    <form name="my-form">
+        <b>Name:</b> <input type="text"name="firstName"placeholder="First Name"/>
+        <input type="text"name="lastName"placeholder="Last Name"/><br>
+        <b>Age:</b> <input type="number"name="age"placeholder="Age"/> <br>
+        <b>Gender: </b>
+        <b>Male:</b>   <input type="radio" name="gender" value="Male"/>
+        <b>Female:</b> <input type="radio" name="gender" value="Female"/> <br>
+    
+        <b>Destination </b> <select name="location">
+            <option value="Tahiti">Tahiti</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Australia">Australia</option> 
+        </select><br>
+
+        <b>Do you have dietary restrictions? Select all that apply:</b> <br>
+        <b>Vegetarian:</b> <input type="checkbox" value="Vegetarian" name="diet"/>
+        <b>Gluten Free:</b> <input type="checkbox" value="glutenFree" name="diet"/>
+        <b>Carnivore:</b> <input type="checkbox" value="carnivore" name="diet"/> <br>
+        <button id="button">Submit</button>
+    </form>
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
