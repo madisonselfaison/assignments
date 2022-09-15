@@ -1,8 +1,39 @@
 body {
-    background-color:rgb(202, 184, 208)
+    background-color:rgb(202, 184, 208);
+    align-items: center;
 }
+
 h1 {
     color:black;
     text-decoration: underline;
     text-align: center;
+}
+
+
+input {
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 40px;
+    margin-left: 60px;
+    justify-content:space-around
+}
+
+input[type="checkbox"], input[type="radio"] {
+    height: 16px;
+    width: 16px;
+    margin-left: 6px;
+    margin-top: 6px;
+    
+}
+
+
+
+textarea {
+    padding: 6px;
+    font-size: 14px;
+}
+
+select {
+    padding: 3px;
+    font-size: 16px;
 }
