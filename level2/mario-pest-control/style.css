@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none; 
+}
+
+body{
+    background-color: rgb(255, 255, 182);
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: block;
+    background-color: #101010;
+
+}
+
+.inner-header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.logo-container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo-container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 800px;
+}
+
+.mario {
+    height: 100px;
+    float: right, ;
+}
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+h2{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    padding: 55px;
+    
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Goombas{
+    font-size: 35px;
+}
+
+.mad-goomba{
+    height: 35px;  
+    margin-inline-end: 30%; 
+    padding-bottom: 45px;
+    padding-right: 5px;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Bob-Ombs{
+    font-size: 35px;
+}
+.madbobomb{
+    height: 40px;
+    margin-inline-end: 150%;
+}
+
+
+.Cheep-Cheeps{
+    font-size: 35px;
+    padding-bottom: 50px;
+}
+
+.mad-cheep-cheep {
+    height: 40px;
+    margin-inline-end: 35%;
+    padding-bottom: px;
+}
+button {
+    height: 55px;
+    width: 160px;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.footer{
+    position:absolute;
+    bottom: 8;
+    width: 100%;
+    height: 20%;
+    background-color: #101010;
+}
+
+p{
+ color: white;
+ text-align: center;
+ padding-top: 20px;
+}
+
