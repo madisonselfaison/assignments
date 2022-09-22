@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+#body {
+    color: #325050;
+    background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
+    font-family: 'Libre Baskerville', sans-serif;
+    font: 75% georgia, sans-serif;
+}
+
+#zentime {
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+}
+
+#header {
+    background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
+    margin-top: 10px;
+    border: 2px dashed black;
+    padding: 20px 0 70px 0;
+    grid-column: 1 / 2;
+    padding-top: 20px;
+    height: 88px;
+    background: #2d6360 50% 0 url(huntington.jpg) no-repeat;
+   
+}
+
+
+
+#h2{
+    background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
+    
+}
+
+#sidebar{
+    border: 2px dashed black;
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 0 70px 0;
+    padding-top: 20px;
+
+}
+
+#boxa{
+    border: 2px dashed black;
+}
+
+#boxb{
+    border: 2px dashed black;
+}
+
+#boxc{
+    border: 2px dashed black;
+}
+
+#boxd{
+    border: 2px dashed black;
+}
+
+#boxe{
+    border: 2px dashed black;
+}
+#boxf{
+    border: 2px dashed black;
+}
+#boxg{
+    border: 2px dashed black;
+}
+#footer{
+    border: 2px dashed black;
+}

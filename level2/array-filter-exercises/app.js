@@ -1,3 +1,32 @@
+// write a function (oneWordOnly) that takes an array of strings, and 
+// returns an array of just the strings with one word in them
+
+
+function oneWordOnly(words){
+  const result = words.filter(function(word){
+      let num = word.indexOf(" ")
+      if(num === -1)
+      return word
+      // console.log(word)
+      // console.log(num)
+  })
+  return result
+}
+ 
+console.log(oneWordOnly(["bird", "bird dog", "humming bird", "dog"])) //=>["bird", "dog"]
+console.log(oneWordOnly(["house", "tiny mansion", "humming bird", "fish", "word"])) //=>["house", "fish", "word"]
+
+// includes, contains (maybe)
+
+// parameters and arguments in functions
+
+
+
+
+
+
+
+
 // //1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
 // const arr = [3, 6, 8, 2]
 
