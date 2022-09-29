@@ -1,95 +1,584 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CSS Zen Garden</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Zen Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
 </head>
 <body>
-    <div id="zentime">
-    <div id="header">
-        <div id="logo"></div>
-        <h1> CSS ZEN GARDEN </h1>
-        <h2> The Beauty of CSS Design</h2>
-    </div>
-    <div id="sidebar">
-        <a href="#designs">View All Designs</a>
-        <a href="#midMod"></a>
-        <a href="#sea"></a>
-        <a href="#spring"></a>
-        <a href="#floral"></a>
-        <a href="#mozart"></a>
-        <a href="#vertigo"></a>
-        <a href="#back75"></a>
-        <a href="#chien"></a>
-        <a href="#table"></a>
-        <a href="#museum"></a>
-        <a href="#hall"></a>
-        <a href="#bonsai"></a>
-        <a href="#skyroots"></a>
-        <a href="#burnt"></a>
-        <a href="#mediterranean"></a>
-        <a href="#edo"></a>
-        <a href="#open"></a>
-        <a href="#miracle"></a>
-        <a href="#egyptian"></a>
-        <a href="#focus"></a>
-        <a href="#radio"></a>
-        <a href="#summary"></a>
-        <a href="#stone"></a>
-        <a href="#zengrounds"></a>
-        <a href="#zunflower"></a>
-        <a href="#wrapped"></a>
-        <a href="#gardenapart"></a>
-        <a href="#salmon"></a>
-    </div>
-    <div id="boxa">
-        <p>A demonstration of what can be accomplished through CSS-based design. Select any style sheet from the list to load it into this page.</p>
-        <p>Download the example <button id="htmlfile">HTML FILE</button> and <button id="cssfile">CSS FILE</button></p>
-        <h3>THE ROAD TO ENLIGHTENMENT</h3>
+  <header class='header'>
+    <h1>CSS ZEN GARDEN</h1>
+    <h2>The Beauty of CSS Design</h2>
+    <h3>VIEW ALL DESIGNS > </h3>
+  </header>
+
+  <div class='container'>
+    <div class='left'>
+      <div class='para1'>
+        <p>A demonstration of what can be accomplished through CSS-based design.  Seletct any style sheet from the list to load it into this page.</p>
+        <p>Downlaod the esample HTML FILE and CSS FILE</p>
+      </div>
+      <div class='para2'>
+        <h2>THE ROAD TO ENLIGHTENMENT</h2>
         <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible DOMs, broken CSS support, and abandoned browsers.</p>
-        <p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the W3C, WASP, and the major browser creators.</p>'
+        <p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the W3C, WASP, and the major browser creators.</p>
         <p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
-        <h3>SO WHAT IS THIS ABOUT?</h3>
+      </div>
+      <div class='para3'>
+        <h2>SO WHAT IS THIS ABOUT?</h2>
         <p>There is a continuing need to show the power of CSS. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The HTML remains the same, the only thing that has changed is the external CSS file. Yes, really.</p>
         <p>CSS allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
-    </div>
-    <div id="boxb">
-        <p>empty box</p>
-    </div>
-    <div id="boxc">
-        <h3>PARTICIPATION</h3>
+      </div>
+      <div class='para4'>
+        <h2>PARTICIPATION</h2>
         <p>Strong visual design has always been our focus. You are modifying this page, so strong CSS skills are necessary too, but the example files are commented well enough that even CSS novices can use them as starting points. Please see the CSS Resource Guide for advanced tutorials and tips on working with CSS.</p>
         <p>You may modify the style sheet in any way you wish, but not the HTML. This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
         <p>Download the sample HTML and CSS to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your CSS file to a web server under your control. Send us a link to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
-        <h3>BENEFITS</h3>
+      </div>
+      <div class='para5'>
+        <h2>BENEFITS</h2>
         <p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing CSS really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.</p>
-    </div>
-    <div id="boxd">
-        <p>VIEW THIS DESIGN'S CSS</p>
-        <p>CSS RESOURCES</p>
-        <p>FAQ</p>
-        <p>SUBMIT A DESIGN</p>
-        <p>TRANSLATIONS</p>
-    </div>
-    <div id="boxe">
-        <h3>REQUIREMENTS</h3>
+      </div>
+      <div class='para6'>
+        <h2>REQUIREMENTS</h2>
         <p>Where possible, we would like to see mostly CSS 1 & 2 usage. CSS 3 & 4 should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical CSS and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your CSS validates.</p>
         <p>Luckily, designing this way shows how well various browsers have implemented CSS by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days — especially when you factor in mobile — pixel-perfect layouts may not be possible across every platform. That’s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>
         <p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We’re well past the point of needing another garden-related design.</p>
         <p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see submission guidelines), but we ask you release your CSS under a Creative Commons license identical to the one on this site so that others may learn from your work.</p>
+      </div>
     </div>
-    <div id="boxf">
-        <p>empty box</p>
+    
+    <div class='right'>
+      <div class='view-switch'>
+        <div class='set1'>
+          <h3>MID CENTURY MODERN</h3>
+          <h4><i>by</i> Andrew Lohman</h4>
+          <h3>GARMETS</h3>
+          <h4><i>by</i> Dan Mall</h4>
+          <h3>STEEL</h3>
+          <h4><i>by</i> Steffen Knoeller</4>
+          <h3>APOTHOCARY</h3>
+          <h4><i>by</i> Trent Walton</h4>
+          <h3>SCREEN FILLER</h3>
+          <h4><i>by</i> Elliot Jay Stocks</h4>
+          <h3>FOUNTAIN KISS</h3>
+          <h4><i>by</i> Jeremy Carlson</h4>
+          <h3>A ROBOT NAMED JIMMY</h3>
+          <h4><i>by</i> meltmedia</h4>
+          <h3>VERDE MODERNA</h3>
+          <h4><i>by</i> Dave Shea</h4>
+        </div>
+        <div class='set2'>
+          <h3>UNDER THE SEA</h3>
+          <h4><i>by</i> Eric Stoltz</h4>
+          <h3>MAEK 'EM PROUD</h3>
+          <h4><i>by</i> Micahael McAghon and Scotty Reifsynder</h4>
+          <h3>ORCHID BEAUTY</h3>
+          <h4><i>by</i> Kevin Addison</h4>
+          <h3>OCEANSCAPE</h3>
+          <h4><i>by</i> Justin Gray</h4>
+          <h3>CSS CO. LTD.</h3>
+          <h4><i>by</i> Benjamin Klemm</h4>
+          <h3>SAKURA</h3>
+          <h4><i>by</i> Tatsuya Uchida</h4>
+          <h3>KYOTO FOREST</h3>
+          <h4><i>by</i> John Politowski</h4>
+          <h3>A WALK IN THE GARDEN</h3>
+          <h4><i>by</i> Simon Van Hauwermeiren</h4>
+        </div>
+      </div>
+      <div class='mid-links'>
+        <h3>VIEW THIS DESIGN’S CSS</h3>
+        <h3>CSS RESOURCES</h3>
+        <h3>FAQ</h3>
+        <h3>SUBMIT A DESIGN</h3>
+        <h3>TRANSLATIONS</h3>
+      </div>
+      <div class='empty'></div>
     </div>
-    <div id="boxg">
-        <h2>By Dave Shea. Bandwidth graciously donated by mediatemple. Now available: Zen Garden, the book.</h2>
-    </div>
-    <div id="footer">
+  </div>
 
+  <div class='footer'>
+    <div class='closing'>
+      <h4>
+        By Dave Shea. Bandwidth graciously donated by mediatemple.
+        <br />
+        Now available: Zen Garden, the book.
+      </h4>
     </div>
-</div>
+    <div class='logos'>
+    </div>
+  </div>
+  
 </body>
 </html>
+
+
+
+
+
+
+
+        <!-- <a href="#spring" id="spring">
+            <h5>SPRING360</h5>
+            <h6><i>by</i> Rene Hornig</h6>
+            <h5>WITHERING BEAUTY</h5>
+            <h6><i>by</i> William Duffy</h6>
+            <h5>TINY BLUE</h5>
+            <h6><i>by</i> Timo Virtanen</h6>
+            <h5>RETRO THEATER</h5>
+            <h6><i>by</i> Eric Roge</h6>
+            <h5>LILY POND</h5>
+            <h6><i>by</i> Rose Thorogood</h6>
+            <h5>ICICLE OUTBACK</h5>
+            <h6><i>by</i> Timo Virtanen</h6>
+            <h5>CSS ZEN ARMY</h5>
+            <h6><i>by</i> Carl Desmond</h6>
+            <h5>THE ORIGINAL</h5>
+            <h6><i>by</i> Joachim Shotter</h6>
+        </a>
+        <a href="#floral" id="floral">
+            <h5>FLORAL TOUCH</h5>
+            <h6><i>by</i> Jadas Jimmy</h6>
+            <h5>ELEGANCE IN SIMPLICITY</h5>
+            <h6><i>by</i> Mani Sheriar</h6>
+            <h5>DAZZLING BEAUTY</h5>
+            <h6><i>by</i> Deny Sri Supriyono</h6>
+            <h5>DARK ROSE</h5>
+            <h6><i>by</i> Rose Fu</h6>
+            <h5>LEGGO MY EGO</h5>
+            <h6><i>by</i> Jon Tan</h6>
+            <h5>LUGOZEE</h5>
+            <h6><i>by</i> Viallon Pierre-Antoine</h6>
+            <h5>THE DIARY</h5>
+            <h6><i>by</i> Alexander Shabuniewicz</h6>
+            <h5>LONELY FLOWER</h5>
+            <h6><i>by</i> Mitja Ribic</h6>
+        </a>
+        <a href="#mozart" id="mozart">
+            <h5>MOZART</h5>
+            <h6><i>by</i> Andrew Brundle</h6>
+            <h5>ORGANICA CREATIVA</h5>
+            <h6><i>by</i> Eduardo Cesario</h6>
+            <h5>WILDERNESS</h5>
+            <h6><i>by</i> Aadesh Mistry</h6>
+            <h5>FADED FLOWERS</h5>
+            <h6><i>by</i> Mani Sheriar</h6>
+            <h5>MANHATTAN EDITION</h5>
+            <h6><i>by</i> Jose Tomas Tocino Garcia</h6>
+            <h5>PEACE OF MIND</h5>
+            <h6><i>by</i> Carlos Varela</h6>
+            <h5>45 RPM</h5>
+            <h6><i>by</i> Thomas Michaud</h6>
+            <h5>PRETTY IN PINK</h5>
+            <h6><i>by</i> Jordi Romkema</h6>
+        </a>
+        <a href="#vertigo" id="vertigo">
+            <h5>VERTIGO</h5>
+            <h6><i>by</i> Antonio Cella</h6>
+            <h5>VIN ROUGE</h5>
+            <h6><i>by</i> Thorsten Bopp</h6>
+            <h5>PINUPS</h5>
+            <h6><i>by</i> Emiliano Pennisi</h6>
+            <h5>ZEN CITY MORNING</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>KELMSCOTT</h5>
+            <h6><i>by</i> Bronwen Hodgkinson</h6>
+            <h5>BUSINESS STYLE</h5>
+            <h6><i>by</i> Gunta Klavina</h6>
+            <h5>SIMPLE</h5>
+            <h6><i>by</i> Shawn Chin</h6>
+            <h5>RED STARS</h5>
+            <h6><i>by</i> Shafiq Rizwan</h6>
+        </a>
+        <a href="#back75" id="back75">
+            <h5>BLACKCOMB*75</h5>
+            <h6><i>by</i> Bryan Carichner</h6>
+            <h5>SHAOLIN YOKOBUE</h5>
+            <h6><i>by</i> Javier Cabrera</h6>
+            <h5>LOVE IS IN THE AIR</h5>
+            <h6><i>by</i> Nele Goetz</h6>
+            <h5>GREECE REMEMBERENCE</h5>
+            <h6><i>by</i> Pierre-Leo Bourbonnais</h6>
+            <h5>HENGARDEN</h5>
+            <h6><i>by</i> Mr. Khmerang</h6>
+            <h5>HOOPS - TOURNAMENT <br>EDITION</h5>
+            <h6><i>by</i> David Marshall Jr.</h6>
+            <h5>OBSEQUIENCE</h5>
+            <h6><i>by</i> Pierce Gleeson</h6>
+            <h5>RED PAPER</h5>
+            <h6><i>by</i> Rob Soule</h6>
+        </a>
+        <a href="#chien" id="chien">
+            <h5>CHIEN</h5>
+            <h6><i>by</i> Alex Miller</h6>
+            <h5>LIKE THE SEA</h5>
+            <h6><i>by</i> Lars Daum</h6>
+            <h5>ANGELUS</h5>
+            <h6><i>by</i> Vladimir Lukic</h6>
+            <h5>ZENFANDEL</h5>
+            <h6><i>by</i> Nicholas Rougeux</h6>
+            <h5>DARUMA</h5>
+            <h6><i>by</i> Stuart Cruickshank</h6>
+            <h5>BERRY FLAVOUR</h5>
+            <h6><i>by</i> Maren Becker</h6>
+            <h5>A SIMPLE SUNRISE</h5>
+            <h6><i>by</i> Rob Soule</h6>
+            <h5>BUGS</h5>
+            <h6><i>by</i> Zohar Arad</h6>
+        </a>
+        <a href="#table" id="table">
+            <h5>TABLE LAYOUT <br> ASSASSINATION!</h5>
+            <h6><i>by</i> Marko Krsul & Marko Dugonjic</h6>
+            <h5>NOVEMBER</h5>
+            <h6><i>by</i> Alen Grakalic</h6>
+            <h5>BUTTERY EFFECT</h5>
+            <h6><i>by</i> Kevin Linkous</h6>
+            <h5>MOSS</h5>
+            <h6><i>by</i> Mani Sheriar</h6>
+            <h5>SUBWAY DREAM</h5>
+            <h6><i>by</i> Pablo Caro</h6>
+            <h5>CONTEMPO FINERY</h5>
+            <h6><i>by</i> Ro London</h6>
+            <h5>BY THE PIER</h5>
+            <h6><i>by</i> Peter Ong</h6>
+            <h5>UNCULTIVATED</h5>
+            <h6><i>by</i> mario Carboni</h6>
+        </a>
+        <a href="#museum" id="museum">
+            <h5>MUSEUM</h5>
+            <h6><i>by</i> Samuel Marin</h6>
+            <h5>ATTUTUDE</h5>
+            <h6><i>by</i> Stephane Moens</h6>
+            <h5>URBAN</h5>
+            <h6><i>by</i> Matt Kim & Nicole</h6>
+            <h5>PARAVION</h5>
+            <h6><i>by</i> Emiliano Pennisi</h6>
+            <h5>VERDURE</h5>
+            <h6><i>by</i> Lim Yuan Qing</h6>
+            <h5>PIXELISATION</h5>
+            <h6><i>by</i> Lim Yuan Qing</h6>
+            <h5>INAVION OF THE BODY<br>SWITCHERS</h5>
+            <h6><i>by</i> Andy Clarke</h6>
+            <h5>GOLDEN CUT</h5>
+            <h6><i>by</i> Petr Stanicek</h6> 
+        </a>
+        <a href="#hall" id="hall">
+            <h5>THE HALL</h5>
+            <h6><i>by</i> Michael Simmons</h6>
+            <h5>NEAT & TIDY</h5>
+            <h6><i>by</i> Oli Dale</h6>
+            <h5>CUBE GARDEN</h5>
+            <h6><i>by</i> Masanori Kawachi</h6>
+            <h5>DJ STYLE</h5>
+            <h6><i>by</i> Ramon Bispo</h6>
+            <h5>THE FINAL ENDING</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>CONTEMPORARY NOUVEAU</h5>
+            <h6><i>by</i> David Hellsing</h6>
+            <h5>EL COLLAR DE TOMAS</h5>
+            <h6><i>by</i> Maria Stultz</h6>
+            <h5>ORDEREDZEN</h5>
+            <h6><i>by</i> Steve Smith</h6>
+        </a>
+        <a href="#bonsai" id="bonsai">
+            <h5>BONSAI</h5>
+            <h6><i>by</i> Martin Plazotta</h6>
+            <h5>TYPE THING</h5>
+            <h6><i>by</i> Michal Mokrzycki</h6>
+            <h5>PSEUDO SAHARA</h5>
+            <h6><i>by</i> John Barrick</h6>
+            <h5>DRAGEN</h5>
+            <h6><i>by</i> Matthew Buchanan</h6>
+            <h5>VIVACITY</h5>
+            <h6><i>by</i> Sofiane Toudji</h6>
+            <h5>C-NOTE</h5>
+            <h6><i>by</i> Brian Williams</h6>
+            <h5>BECCAH</h5>
+            <h6><i>by</i> chris Morrell</h6>
+            <h5>TEATIME</h5>
+            <h6><i>by</i> Michaela Maria Sampl</h6>
+        </a>
+        <a href="#skyroots" id="skyroots">
+            <h5>SKYROOTS</h5>
+            <h6><i>by</i> Axel Hebenstreit</h6>
+            <h5>CENTERFOLD</h5>
+            <h6><i>by</i> John Oxton</h6>
+            <h5>60'S LIFESTYLE</h5>
+            <h6><i>by</i> Emiliano Pennisi</h6>
+            <h5>MEDIOEVO</h5>
+            <h6><i>by</i> Emiliano Pennisi</h6>
+            <h5>PLEASANT DAY</h5>
+            <h6><i>by</i> Kyle Jones</h6>
+            <h5>SOME LEAFS</h5>
+            <h6><i>by</i> Michael Tupy</h6>
+            <h5>BRUSHWOOD</h5>
+            <h6><i>by</i> Katrin Zieger</h6>
+            <h5>RAGGED</h5>
+            <h6><i>by</i> Jose Florido</h6>
+        </a>
+        <a href="#burnt" id="burnt">
+            <h5>BURNT OFFERING</h5>
+            <h6><i>by</i> Jonny Blair</h6>
+            <h5>SALVAGE YARD</h5>
+            <h6><i>by</i> Justin Peters</h6>
+            <h5>SWITCH ON</h5>
+            <h6><i>by</i> Michael Fasani</h6>
+            <h5>MOUNTAIN RESORT</h5>
+            <h6><i>by</i> Jordi Romkema</h6>
+            <h5>GRUENER ENTWURF</h5>
+            <h6><i>by</i> Hannah F. Liesong</h6>
+            <h5>PERFUME DE GARDENIAS</h5>
+            <h6><i>by</i> Armando Sosa</h6>
+            <h5>PNEUMA</h5>
+            <h6><i>by</i> Adam Polselli</h6>
+            <h5>DEFIANCE</h5>
+            <h6><i>by</i> James Ehly</h6>
+        </a>
+        <a href="#mediterranean" id="mediterranean">
+            <h5>MEDITERRANEAN</h5>
+            <h6><i>by</i> John Whittet</h6>
+            <h5>AUSTRIAN'S DARKER SIDE</h5>
+            <h6><i>by</i> Rene Grassegger</h6>
+            <h5>INVITATION</h5>
+            <h6><i>by</i> Brad Daily</h6>
+            <h5>ODYSSEY</h5>
+            <h6><i>by</i> Terrence Conley</h6>
+            <h5>REVOLUTION!</h5>
+            <h6><i>by</i> David Hellsing</h6>
+            <h5>PUNKASS</h5>
+            <h6><i>by</i> Mikhel Proulx</h6>
+            <h5>15 PETALS</h5>
+            <h6><i>by</i> Eric Meyer & Dave Shea</h6>
+            <h5>WIGGLES THE<br>WONDERWORM</h5>
+            <h6><i>by</i> Joseph Pearson</h6>
+        </a>
+        <a href="#edo" id="edo">
+            <h5>EDO AND TOKYO</h5>
+            <h6><i>by</i> Daisuke Sato</h6>
+            <h5>NO FRONTIERS!</h5>
+            <h6><i>by</i> Michal Mokrzycki</h6>
+            <h5>JAPANESE GARDEN</h5>
+            <h6><i>by</i> Masanori Kawachi</h6>
+            <h5>CORPORATE ZENWORKS</h5>
+            <h6><i>by</i> Derek Hansen</h6>
+            <h5>DECO</h5>
+            <h6><i>by</i> Marc Trudel</h6>
+            <h5>SOUTH OF THE BORDER</h5>
+            <h6><i>by</i> Rob Shields</h6>
+            <h5>PORT OF CALL</h5>
+            <h6><i>by</i> Jessica Dunn</h6>
+            <h5>WEBZINE</h5>
+            <h6><i>by</i> Vincent Valentin</h6>
+        </a>
+        <a href="#open" id="open">
+            <h5>OPEN WINDOW</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>DARK INSUDTRIAL</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>TULIPE</h5>
+            <h6><i>by</i> Eric Shepherd</h6>
+            <h5>MAYA</h5>
+            <h6><i>by</i> Brend Willenberg</h6>
+            <h5>REDFROG</h5>
+            <h6><i>by</i> Bernd Willenberg</h6>
+            <h5>OCEANS APART</h5>
+            <h6><i>by</i> Ryan Sims</h6>
+            <h5>START LISTENING!</h5>
+            <h6><i>by</i> Liz Lubowitz</h6>
+            <h5>SPRINGTIME</h5>
+            <h6><i>by</i> Boer Attila</h6>
+        </a>
+        <a href="#miracle" id="miracle">
+            <h5>MIRACLE CURE</h5>
+            <h6><i>by</i> Joseph Pearson</h6>
+            <h5>SEASHORE</h5>
+            <h6><i>by</i> Clinton Barth</h6>
+            <h5>ZEN POOL</h5>
+            <h6><i>by</i> Clinton Barth</h6>
+            <h5>GREEN TEA</h5>
+            <h6><i>by</i> Amy Rae Som</h6>
+            <h5>MUTO VERDE</h5>
+            <h6><i>by</i> Alex Taylor</h6>
+            <h5>HOP</h5>
+            <h6><i>by</i> Guilluame Lahalle</h6>
+            <h5>LOTUS</h5>
+            <h6><i>by</i> Chika</h6>
+            <h5>LOST HIGHWAY</h5>
+            <h6><i>by</i> Julien Roumagnac</h6>
+        </a>
+        <a href="#egyptian" id="egyptian">
+            <h5>EGYPTIAN DAWN</h5>
+            <h6><i>by</i> James Abbott</h6>
+            <h5>EMMAKADE</h5>
+            <h6><i>by</i> Alexander Christiaan Jacob(ACJ)</h6>
+            <h5>OUTBURST</h5>
+            <h6><i>by</i> Chris Vincent</h6>
+            <h5>GARDEN PARTY</h5>
+            <h6><i>by</i> Bobby van der Sluis</h6>
+            <h5>CS(S) MONK</h5>
+            <h6><i>by</i> Cedric Savarese</h6>
+            <h5>BONSAI SKY</h5>
+            <h6><i>by</i> Mike Davidson</h6>
+            <h5>BALLADE</h5>
+            <h6><i>by</i> Charlotte Lambert</h6>
+            <h5>A SILENT STRENGTH</h5>
+            <h6><i>by</i> Ray Henry</h6>
+        </a>
+        <a href="#focus" id="focus">
+            <h5>FOCUS & SHOOT</h5>
+            <h6><i>by</i> Colectivo YTW</h6>
+            <h5>NEW GROOVE</h5>
+            <h6><i>by</i> Martin Neumann</h6>
+            <h5>NIGHT DRIVE</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>ELASTIC LAWN</h5>
+            <h6><i>by</i> Patrick Grifiths</h6>
+            <h5>GEMINATION</h5>
+            <h6><i>by</i> Egor Kloos</h6>
+            <h5>SKY</h5>
+            <h6><i>by</i> Stefan Petre</h6>
+            <h5>EXTREME LIMITS</h5>
+            <h6><i>by</i> Richard Chatfield</h6>
+            <h5>DUNE TMEPLE</h5>
+            <h6><i>by</i> Greg Reimer</h6>
+        </a>
+        <a href="#radio" id="radio">
+            <h5>RADIO ZEN</h5>
+            <h6><i>by</i> Marc LA van den Heuvel</h6>
+            <h5>THIS IS CEREAL</h5>
+            <h6><i>by</i> Shaun Inman</h6>
+            <h5>ELEVATION</h5>
+            <h6><i>by</i> Nigel Goodfellow</h6>
+            <h5>ZENLIGHTENMENT</h5>
+            <h6><i>by</i> Lance Leonard</h6>
+            <h5> GECKO'S EYE</h5>
+            <h6><i>by</i> Sandra Greco</h6>
+            <h5>SELF-GROWTH</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>POSTAGE PAID</h5>
+            <h6><i>by</i> Mike Stenhouse</h6>
+            <h5>COMMERCIAL DRIVE</h5>
+            <h6><i>by</i> Wendy Foster</h6>
+        </a>
+        <a href="#summary" id="summary">
+            <h5>FIRST SUMMARY</h5>
+            <h6><i>by</i> Cornelia Lange</h6>
+            <h5>BUDDHA</h5>
+            <h6><i>by</i> Daniel Leroux</h6>
+            <h5>HORIZENTAL</h5>
+            <h6><i>by</i>Clément ‘fastclemmy’ Hardouin</h6>
+            <h5>DUSK</h5>
+            <h6><i>by</i> Jon Hicks</h6>
+            <h5>SUB LIME</h5>
+            <h6><i>by</i> Andy Budd</h6>
+            <h5>I DREAM IN COLOUR</h5>
+            <h6><i>by</i> Jeff Bieln</h6>
+            <h5>S16</h5>
+            <h6><i>by</i> Shaun Inman</h6>
+            <h5>BURNING</h5>
+            <h6><i>by</i> Kevin & Ethel Davis</h6>
+        </a>
+        <a href="#stone" id="stone">
+            <h5>STONEWASHED</h5>
+            <h6><i>by</i> Andrew Hayward</h6>
+            <h5>DOOR TO MY GARDEN</h5>
+            <h6><i>by</i> Patrick H. Lauke</h6>
+            <h5>THE QUESTION WHY</h5>
+            <h6><i>by</i> Diane Clayton</h6>
+            <h5>ERRATIC BLUE</h5>
+            <h6><i>by</i> Ian Main</h6>
+            <h5>CREEPY CRAWLY</h5>
+            <h6><i>by</i> Luke Redpath</h6>
+            <h5>PPRÊT-Á-PORTER</h5>
+            <h6><i>by</i>Minz Meyer</h6>
+            <h5>WHITE LILY</h5>
+            <h6><i>by</i> Jens Kristensen</h6>
+            <h5>RELEASE ONE</h5>
+            <h6><i>by</i> Didier Hilhorst</h6>
+        </a>
+        <a href="#zengrounds" id="zengrounds">
+            <h5>ZENGROUNDS</h5>
+            <h6><i>by</i> Andrea Piernock</h6>
+            <h5>FLEUR-DE-LYS</h5>
+            <h6><i>by</i> Claire Campbell</h6>
+            <h5>CRAB APPLE</h5>
+            <h6><i>by</i> Jai Brinkofski</h6>
+            <h5>HEDGES</h5>
+            <h6><i>by</i> Kev Mears</h6>
+            <h5>ENTOMOLOGY</h5>
+            <h6><i>by</i> Jon Hicks</h6>
+            <h5>BACKYARD</h5>
+            <h6><i>by</i> Ray Henry</h6>
+            <h5>ATLANTIS</h5>
+            <h6><i>by</i> Kevin Davis</h6>
+            <h5>GOTHICA</h5>
+            <h6><i>by</i> Patrick H. Lauke</h6>
+        </a>
+        <a href="#zunflower" id="zunflower">
+            <h5>ZUNFLOWER</h5>
+            <h6><i>by</i> Radu Darvas</h6>
+            <h5>MNEMONIC</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>NOT SO MINIMAL</h5>
+            <h6><i>by</i> Dan Rubin</h6>
+            <h5>FLEUR DE L'AVANT-GARDE</h5>
+            <h6><i>by</i> Michael Switzer</h6>
+            <h5>VIRIDITY</h5>
+            <h6><i>by</i> Laura MacArthur</h6>
+            <h5>CALM & SMOOTH</h5>
+            <h6><i>by</i> Cornelia Lange</h6>
+            <h5>FRIENDLY BEACHES</h5>
+            <h6><i>by</i> Sophie G</h6>
+            <h5>WHAT LIES BENEATH</h5>
+            <h6><i>by</i> Michael Pic</h6>
+        </a>
+        <a href="#wrapped" id="wrapped">
+            <h5>WRAPPED IN BURLAP</h5>
+            <h6><i>by</i> John Simons</h6>
+            <h5>GOLEND MEAN</h5>
+            <h6><i>by</i> Douglas Bowman</h6>
+            <h5>THE GARDEN BENEATH</h5>
+            <h6><i>by</i> Minz Meyer</h6>
+            <h5>BODDHIDARMA</h5>
+            <h6><i>by</i> Michael Angeles</h6>
+            <h5>SAMURAAI</h5>
+            <h6><i>by</i> Mins Meyer</h6>
+            <h5>COASTAL BREEZE</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>TECHNOHM</h5>
+            <h6><i>by</i> Josh Ambrutis</h6>
+            <h5>MELIORISM</h5>
+            <h6><i>by</i> Brett J. Gilbert</h6>
+        </a>
+        <a href="#gardenapart" id="gardenapart">
+            <h5>A GARDEN APART</h5>
+            <h6><i>by</i> Dan Cederholm</h6>
+            <h5>DEAD OR ALIVE</h5>
+            <h6><i>by</i> Michael Pick</h6>
+            <h5>RPM</h5>
+            <h6><i>by</i> Bruno Cunha</h6>
+            <h5>DEEP THOUGHTS</h5>
+            <h6><i>by</i> Jason Estes</h6>
+            <h5>WICKED GROVE</h5>
+            <h6><i>by</i> D. Keith Robinson</h6>
+            <h5>BLOOD LUST</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>ARCH420</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>STORMWEATHER</h5>
+            <h6><i>by</i> Dave Shea </h6>
+        </a>
+        <a href="#salmon" id="salmon">
+            <h5>SALMON CREAM CHEESE</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            <h5>TRANQUILLE</h5>
+            <h6><i>by</i> Dave Shea</h6>
+            </a> 
+         </div>
+    </div>
+     -->

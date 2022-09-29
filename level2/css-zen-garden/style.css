@@ -1,70 +1,212 @@
-@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
-
-#body {
-    color: #325050;
-    background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
-    font-family: 'Libre Baskerville', sans-serif;
-    font: 75% georgia, sans-serif;
-}
-
-#zentime {
-   display: grid;
-   grid-template-columns: 3fr 1fr;
-}
-
-#header {
-    background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-    margin-top: 10px;
-    border: 2px dashed black;
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0; 
+  }
+  
+  header {
+    position: static;
+    display: grid;
+    grid-template-areas: 1fr 1fr 1fr 1fr;
     padding: 20px 0 70px 0;
-    grid-column: 1 / 2;
-    padding-top: 20px;
-    height: 88px;
-    background: #2d6360 50% 0 url(huntington.jpg) no-repeat;
-   
-}
+    background-image: url(huntington.jpg);
+    background-size: cover;
+    text-align: center;
+  }
+  
+  img {
+    height: 30px;
+    width: 45px;
+  }
+  
+  header h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.5em;
+    position: relative;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    padding: 60px 0 5px 0;
+    color: #ffffff;
+  }
+  
+  header h1::before {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    content: "";
+    width: 100px;
+    height: 100px;
+    margin: -20px 20px 0 0;
+    background: url(http://www.csszengarden.com/214/enso.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.6;
+  }
+  header h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: 'Libre Baskerville', serif; 
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+  }
+  
+  header h3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-areas: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0;
+  }
+  
+  .container h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #1a5952;
+  }
+  
+  .container p{
+    font-family: 'Libre Baskerville', serif; 
+  }
+  
+  .left {
+    color: #1a5952;
+    align-content: center;
+    margin: 0;
+    padding: 40px;
+    align-items: 'center';
+  }
+  
+  .left h2{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+  }
+  
+  .para1, .para2, .para3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  
+  .para4, .para5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+  
+  .para6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  
+  .right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    color: #1a5952;
+    background: #edf4f0;
+    margin: 0;
+  }
+  
+  .view-switch {
+    margin: 0;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  
+  .right h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    color: #809b7e;
+  }
+  
+  .right h4 {
+    font-family: 'Libre Baskerville', serif; 
+    font-weight: lighter;
+    font-size: .8em;
+  }
+  
+  .set1, .set2 {
+    padding: 30px 30px 20px 20px;
+  }
+  .para4 p, .para5 p{
+    font-family: 'Libre Baskerville', serif;   
+    font-weight: normal;
+    color: #1a5952;
+  
+  }
+  .mid-links {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 30px 30px 20px 20px;
+    overflow: hidden;
+    background-color: rgba(138,188,159,0.5);
+    background-image: url(bamboo.png);
+    border-top: solid 1px #a0b9ad;
+  }
+  
+  .empty {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    background-color: #ffffff;
+  }
+  
+  .footer {
+    position: static;
+    display: grid;
+    grid-template-areas: 1fr;
+  }
+  
+  .closing {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-family: 'Libre Baskerville', serif; 
+    font-size: 2em;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    background-image: url(koi.jpg);
+    background-size: cover;
+  }
+  
+  .logos {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    font-family: 'verdemoderna';
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #3e5d67;
+    height: 30vh;
+    margin: 0;
+  }
 
 
 
-#h2{
-    background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-    
-}
 
-#sidebar{
-    border: 2px dashed black;
-    width: 100%;
-    margin-top: 10px;
-    padding: 20px 0 70px 0;
-    padding-top: 20px;
 
-}
 
-#boxa{
-    border: 2px dashed black;
-}
-
-#boxb{
-    border: 2px dashed black;
-}
-
-#boxc{
-    border: 2px dashed black;
-}
-
-#boxd{
-    border: 2px dashed black;
-}
-
-#boxe{
-    border: 2px dashed black;
-}
-#boxf{
-    border: 2px dashed black;
-}
-#boxg{
-    border: 2px dashed black;
-}
-#footer{
-    border: 2px dashed black;
-}

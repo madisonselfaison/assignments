@@ -1,0 +1,93 @@
+{
+    "appetizers":[
+        {
+            "green salad" :{
+                "ingredients":[
+                    "spinach", "grilled chicken", "tomatoes", "dressing"
+                ],
+                "description":"it is a salad",
+                "price" : "14"
+            },
+            "bloomin' onion" :{
+                "ingredients":[
+                    "onion", "breading", "oil"
+                ],
+                "description": "deep fried and great with dipping sauce",
+                "price" : "10"
+            },
+            "pizza pockets" : {
+                "ingredients":[
+                    "pizza dough", "cheese", "pepperoni","pizza sauce"
+                ],
+                "description":"it is easy to eat a lot of these in one sitting",
+                "price": "8.50"
+            }
+           
+            }
+    ],
+    "cold sandwiches":[
+        {
+            "ham and cheese":{
+                "ingredients":[
+                    "ham", "cheese"
+                ],
+                "description":"a perfect combo of cheese and ham to satisfy your needs",
+                "price": "10"
+            },
+            "tuna": {
+                "ingredients":[
+                    "rye bread", "tuna", "mayo", "side of fries"
+                ],
+                "description":"high in protein, but might give you bad breath",
+                "price": "8"
+            },
+            "pastrami on rye":{
+                "ingredients":[
+                    "pastrami", "rye bread"
+                ],
+                "description": "taking you back to your favorite Jewish deli with this pastrami delight",
+                "price":"12"
+            }
+        }
+    ],
+    "hot sandwiches":[
+        {
+            "fried chicken":{
+                "ingredients":[
+                    "chicken", "breading", "buns", "pickles", "secret sauce"
+                ],
+                "description": "our chicken has a pop of spice and the secret sauce is to die for",
+                "price":"15"
+            },
+            "meatball sub": {
+                "ingredients":[
+                    "bread","meatballs", "marinara sauce", "vegetables"
+                ],
+                "description":"meatballs do not belong in spaghetti.",
+                "price":"12"
+            },
+            "grilled chicken sandwich": {
+                "ingredients":[
+                    "grilled seasoned chicken breasts", "buns", "lettuce", "tomato"
+                ],
+                "description":"our healthier option will leave you very satisfied",
+                "price": "12"
+            }
+        }
+    ],
+    "desserts":[
+        {
+            "chocolate brownie": "5",
+            "soft serve ice cream cone": "3",
+            "cheesecake": "6"
+        }
+    ],
+    "drinks":[
+        {
+            "fountain drinks": "2.50",
+            "coffee" : "4",
+            "juice of the day": "3"
+        }
+    ]
+    
+}
