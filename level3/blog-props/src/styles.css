@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 30px 25px;
+}
+.list {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  position:absolute;
+  font-size: 20px;
+  text-shadow: 1px 1px #030101;
+  font-family: sans-serif
+}
+.contact{
+  margin-left: 45px;
+}
+.sample{
+  margin-left:45px;
+}
+.about{
+  margin-left:45px;
+}
+.home{
+  margin-left:1200px;
+}
+.site-title{
+  color: white;
+  position: absolute;
+  font-size: 35px;
+  text-shadow: 12px;
+  margin-left: 165px;
+  font-style: bold;
+  text-shadow: 0.5px 0.5px #030101;
+  font-family: sans-serif
+}
+.subTitle {
+  color: white;
+  position: absolute;
+  margin-top: 450px;
+  font-size: 65px;
+  margin-left: 785px;
+  text-shadow: 0.5px 0.5px #030101;
+  font-family: sans-serif
+}
+.otherTitle {
+  color: white;
+  position: absolute;
+  margin-top: 550px;
+  font-size: 25px;
+  margin-left: 770px;
+  text-shadow: 0.5px 0.5px #030101;
+  font-family: sans-serif
+}
+.headerImg {
+  position: relative;
+  width: 2000px;
+  height: 1075px;
+  padding-top: 200px;
+}
+.blog {
+  display: grid;
+  padding-top: 500px;
+  justify-content: center;
+  
+}
+.title{
+  font-size: 25px;
+  
+}
+.sub {
+  font-size: 20px;
+ 
+}
+.author{
+  font-size: 18px
+ 
+}
+.date {
+  font-size: 18px;
+}
+.footer {
+  width: 1903px;
+  height: auto;
+  color: black;
+  font-style: italic;
+}
+.copy{
+  padding-left: 850px;
+  padding-bottom: 90px;
+  padding-top: 190px;
+}
+.button {
+  width: 90px;
+  height: 26px;
+
+}

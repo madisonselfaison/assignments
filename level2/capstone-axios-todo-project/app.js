@@ -27,22 +27,15 @@ function listData(arr){
     h1.appendChild(doneBtn)
 
     const updates = {
-        completed: true
+        completed: !arr[i].completed
     }
-    const otherUpdates = {
-        completed: false
-    }
+  
     doneBtn.addEventListener('click', ()=> {
-        if(arr[i].completed === false){
             axios.put("https://api.vschool.io/madisonselfaison/todo/" + arr[i]._id, updates)
             .then(getData)
             .catch(error => console.log(error))
-        } else if (arr[i].completed === true){
-            axios.put("https://api.vschool.io/madisonselfaison/todo/" + arr[i]._id, otherUpdates)
-            .then(getData)
-            .catch(error => console.log(error))
-        }
-    })
+        }) 
+    
     const descriptionh2 = document.createElement('h2')
     descriptionh2.textContent = arr[i].description
     document.getElementById("todoList").appendChild(descriptionh2)
@@ -65,26 +58,26 @@ function listData(arr){
 }
 
 function clearList (){
-const el = document.getElementById("todoList")
-while(el.firstChild){
-    el.removeChild(el.firstChild)
-}
+    const el = document.getElementById("todoList")
+    while(el.firstChild){
+        el.removeChild(el.firstChild)
+    }
 }
 
 todoForm.addEventListener("submit", function(e){
-e.preventDefault()
-const newTodo = {
-    title: todoForm.title.value,
-    description: todoForm.description.value,
-    price: todoForm.price.value,
-    imgUrl: todoForm.imgUrl.value
-}
+    e.preventDefault()
+    const newTodo = {
+        title: todoForm.title.value,
+        description: todoForm.description.value,
+        price: todoForm.price.value,
+        imgUrl: todoForm.imgUrl.value
+    }
 
-todoForm.title.value=""
-todoForm.description.value=""
-todoForm.price.value=""
-todoForm.imgUrl.value=""
-axios.post("https://api.vschool.io/madisonselfaison/todo/", newTodo)
-    .then(getData)
-    .catch(error => console.log(error))
+    todoForm.title.value=""
+    todoForm.description.value=""
+    todoForm.price.value=""
+    todoForm.imgUrl.value=""
+    axios.post("https://api.vschool.io/madisonselfaison/todo/", newTodo)
+        .then(getData)
+        .catch(error => console.log(error))
 })
